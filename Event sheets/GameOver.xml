@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <event-block sid="292946385707045">
+            <conditions>
+                <condition id="3" name="On touched object" sid="669151310540681" type="Touch">
+                    <param id="0" name="Object">RestartButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="142787956812621" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="247555259174809" type="System" />
+                <action id="-2" name="Go to layout" sid="542851924348390" type="System">
+                    <param id="0" name="Layout">HUB</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="760963001771194">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="885178984213349" type="Mouse">
+                    <param id="0" name="Object">RestartButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="795610114900431" type="RestartButton">
+                    <param id="0" name="Scale">0.95</param>
+                </action>
+                <action id="5" name="Set frame" sid="827646103508683" type="RestartButton">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="465488284838630" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752382142074795">
+            <conditions>
+                <condition id="-22" name="Else" sid="493105627708364" type="System" />
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="574970882471770" type="RestartButton">
+                    <param id="0" name="Scale">1.0</param>
+                </action>
+                <action id="5" name="Set frame" sid="448507686514839" type="RestartButton">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="490667016188183" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

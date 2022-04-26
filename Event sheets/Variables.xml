@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Variables</name>
+    <events>
+        <variable constant="0" name="goLevel" sid="765592572568622" static="0" type="text">null</variable>
+        <variable constant="0" name="lifes" sid="954408588263050" static="0" type="number">3</variable>
+        <variable constant="0" name="timer" sid="379330750327313" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

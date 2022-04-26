@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HUB</name>
+    <events>
+        <event-block sid="911022279829296">
+            <conditions>
+                <condition id="3" name="On touched object" sid="197717155190156" type="Touch">
+                    <param id="0" name="Object">levels</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="389380757895039" type="levels">
+                    <param id="0" name="Instance variable">blocked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="768065421433253" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="897702531468269" type="System">
+                    <param id="0" name="Variable">goLevel</param>
+                    <param id="1" name="Value">levels.level</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="219328390372385" type="System">
+                    <param id="0" name="Layout">FirstFase</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="979405245606772">
+            <conditions>
+                <condition id="3" name="On touched object" sid="342214133076959" type="Touch">
+                    <param id="0" name="Object">levels</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="538358468463052" type="levels">
+                    <param id="0" name="Instance variable">blocked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="193482297926018" type="levels">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="694585330410161" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="302642145639500" type="levels">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="179083071861299">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="653432674066769" type="Mouse">
+                    <param id="0" name="Object">levels</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="259552445867641" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+                <action id="9" name="Set scale" sid="758884167841854" type="levels">
+                    <param id="0" name="Scale">1.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="100047209190652">
+            <conditions>
+                <condition id="-22" name="Else" sid="832266270608167" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="714890492385573" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="9" name="Set scale" sid="297676369616194" type="levels">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

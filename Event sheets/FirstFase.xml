@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FirstFase</name>
+    <events>
+        <variable constant="0" name="points" sid="548259600491253" static="0" type="number">0</variable>
+        <variable constant="0" name="selectedWord" sid="490633879530373" static="0" type="number">0</variable>
+        <event-block sid="371119977093749">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="645922373934403" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="736804796580205" type="Function">
+                    <param id="0" name="Name">&quot;SetHearts&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="299618454971097" type="Function">
+                    <param id="0" name="Name">&quot;GenerateAnwser&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="4" name="Set animation" sid="533517064109029" type="pictures">
+                    <param id="0" name="Animation">goLevel</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="760271430404751" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="0" name="Set text" sid="212200509016843" type="level">
+                    <param id="0" name="Text">goLevel</param>
+                </action>
+                <action id="0" name="Set text" sid="133030130746547" type="questions">
+                    <param id="0" name="Text">pictures.AnimationFrameCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="819115982614538">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="410993632120736" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="593545424864319" type="points">
+                    <param id="0" name="Text">points</param>
+                </action>
+                <action id="0" name="Call function" sid="778201611898286" type="Function">
+                    <param id="0" name="Name">&quot;VerifyTime&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="818841419663278" type="Function">
+                    <param id="0" name="Name">&quot;VerifyLifes&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="931066393682218">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="981583881997130" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="731363888417243" type="Function">
+                    <param id="0" name="Name">&quot;GenerateAnwser&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="787124513424346">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="224808429576024" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="597490197729824" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="665910485213171" type="timer">
+                    <param id="0" name="Text">timer &amp; &quot; seg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="551325776953721">
+            <conditions>
+                <condition id="2" name="Key is down" sid="394863315052297" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="351449065477203" type="hook">
+                    <param id="0" name="Instance variable">active</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="613741754538400" type="System">
+                    <param id="0" name="Variable">selectedWord</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="422501564047369" type="hook">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="2" name="Set ignoring input" sid="496044160193321" type="hook">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="482995929885422" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">100</param>
+                </action>
+                <action id="5" name="Set frame" sid="433976340209306" type="hook">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="224442316293834" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="315308501791457" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="101099069878161" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="279922802384210" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="325287341795424" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="158862682229976" type="hook">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="637585766335888" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="411619249940421" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="201304151721188" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="196839733844016" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="5" name="Set frame" sid="530619559565566" type="hook">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="320456597172081" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">-100</param>
+                </action>
+                <action id="-16" name="Wait" sid="621389899790090" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="209083611169904" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">-100</param>
+                </action>
+                <action id="-16" name="Wait" sid="568346461279093" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="979138767064573" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">-100</param>
+                </action>
+                <action id="-16" name="Wait" sid="207554309699289" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="373920095987704" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">-100</param>
+                </action>
+                <action id="-16" name="Wait" sid="804336139511928" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="441171627760972" type="hook">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">-100</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="733216701819831" type="hook">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="8Direction" id="2" name="Set ignoring input" sid="814468164039557" type="hook">
+                    <param id="0" name="Input">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="519801073272980">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="851018733386602" type="hook">
+                    <param id="0" name="Object">wordbox</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="965839501634616" type="System">
+                    <param id="0" name="Variable">selectedWord</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="356532785867796" type="hook">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="385121546040720" type="wordbox">
+                    <param id="0" name="Object">hook</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="204132107756728" type="wordbox">
+                    <param id="0" name="Pin to">hook</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="971819421740594" type="System">
+                    <param id="0" name="Variable">selectedWord</param>
+                    <param id="1" name="Value">wordbox.UID</param>
+                </action>
+                <action id="-16" name="Wait" sid="192146371541212" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="5" name="Set frame" sid="436783029475024" type="hook">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="256649274224751" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action behavior="8Direction" id="2" name="Set ignoring input" sid="488217802857149" type="hook">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="350665885390192" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="765088286275996" type="hook">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="996479517723983" type="wordbox" />
+                <action behavior="8Direction" id="2" name="Set ignoring input" sid="164810097229903" type="hook">
+                    <param id="0" name="Input">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="804979807917542">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="374447798416164" type="wordbox">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">pictures.AnimationFrame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="326421391026605" type="System">
+                            <param id="0" name="Variable">selectedWord</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="868978753746052" type="System">
+                            <param id="0" name="Variable">points</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="815701455396570" type="Function">
+                            <param id="0" name="Name">&quot;VerifyWin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="788066517016333" type="Function">
+                            <param id="0" name="Name">&quot;AddTime&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="188485288318618" type="pictures">
+                            <param id="0" name="Frame number">pictures.AnimationFrame + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="278591252569896">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="202220483214604" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="928681164534976" type="life">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lifes</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="432821064113092" type="hook">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="168783992557835" type="System">
+                            <param id="0" name="Variable">lifes</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="513226685081436" type="life">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="747525082667366" type="hook">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="626188943976737" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="315275217275072" type="System">
+                            <param id="0" name="Variable">selectedWord</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="611562794245667" type="hook">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="496463182401523" type="hook">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="984961144353472">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="151776311486135" type="wordbox">
+                    <param id="0" name="Object">destroy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="849952767524429" type="wordbox" />
+            </actions>
+        </event-block>
+        <event-block sid="444143049216726">
+            <conditions>
+                <condition id="0" name="On function" sid="772387404162673" type="Function">
+                    <param id="0" name="Name">&quot;GenerateAnwser&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="236191761545083" type="spawn">
+                    <param id="0" name="Object">wordbox</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="862933274791027" type="wordbox">
+                    <param id="0" name="Animation">goLevel</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="446938948190839" type="wordbox">
+                    <param id="0" name="Frame number">random(0, wordbox.AnimationFrameCount)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792823737069848">
+            <conditions>
+                <condition id="0" name="On function" sid="196705331881647" type="Function">
+                    <param id="0" name="Name">&quot;AddTime&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="220696661675117" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="899484048454773" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="340472695793826">
+            <conditions>
+                <condition id="0" name="On function" sid="893449467410664" type="Function">
+                    <param id="0" name="Name">&quot;VerifyTime&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="236998398120393" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="959608685451479" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="105225107183662" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="910969848306479">
+            <conditions>
+                <condition id="0" name="On function" sid="876399528454752" type="Function">
+                    <param id="0" name="Name">&quot;VerifyLifes&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="478479016105492" type="System">
+                    <param id="0" name="Variable">lifes</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="371810105313586" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="326473797143173">
+            <conditions>
+                <condition id="0" name="On function" sid="858884573964783" type="Function">
+                    <param id="0" name="Name">&quot;VerifyWin&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="509863795235148" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">pictures.AnimationFrameCount</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="639435436651071" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="613434331269966" type="System">
+                    <param id="0" name="Variable">selectedWord</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="910435141493194" type="System">
+                    <param id="0" name="Layout">HUB</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="800104330013096">
+            <conditions>
+                <condition id="0" name="On function" sid="556586118319542" type="Function">
+                    <param id="0" name="Name">&quot;SetHearts&quot;</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="441429540623824" type="System">
+                    <param id="0" name="Object">life</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="925842512468856" type="life">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">lifes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="977437549551660" type="life">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

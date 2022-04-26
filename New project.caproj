@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1708</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Keyboard" sid="322120526516339">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="hook" sid="955386550173281">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="active" sid="100883900426661" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="327854162550401">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="959833222262702">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901796506053800" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\claw.png">
+                        <image-point name="grip" x="0.507109" y="0.94819" />
+                        <collision-poly>
+                            <point x="0.587678" y="0.00249688" />
+                            <point x="0.417062" y="0.00202103" />
+                            <point x="0.398104" y="0.775281" />
+                            <point x="0.00473928" y="0.910112" />
+                            <point x="0.338862" y="0.995006" />
+                            <point x="0.701422" y="0.995006" />
+                            <point x="1" y="0.908864" />
+                            <point x="0.573459" y="0.777778" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\claw.png">
+                        <image-point name="grip" x="0.5" y="0.942572" />
+                        <collision-poly>
+                            <point x="0.438247" y="0" />
+                            <point x="0.541833" y="0" />
+                            <point x="0.563745" y="0.782148" />
+                            <point x="0.729084" y="1" />
+                            <point x="0.260956" y="1" />
+                            <point x="0.422311" y="0.790262" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\claw open.png">
+                        <image-point name="grip" x="0.5" y="0.945557" />
+                        <collision-poly>
+                            <point x="0.405498" y="0.78348" />
+                            <point x="0.414789" y="0" />
+                            <point x="0.567011" y="0" />
+                            <point x="0.578338" y="0.786111" />
+                            <point x="0.771478" y="1" />
+                            <point x="0.220791" y="0.998813" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\claw_catch.png">
+                        <image-point name="grip" x="0.502" y="0.963125" />
+                        <collision-poly>
+                            <point x="0.234418" y="1" />
+                            <point x="0.730418" y="1" />
+                            <point x="0.586418" y="0.8025" />
+                            <point x="0.578418" y="0" />
+                            <point x="0.426418" y="0" />
+                            <point x="0.402418" y="0.803877" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wall" sid="598292094504171">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="545378400926899">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617719060234975" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wordbox" sid="248926674289920">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="word" sid="589679551999739" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="486414826551936">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="433473983486860">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Fruits" pingpong="0" repeatcount="1" repeatto="0" sid="908961360876709" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\fruits\apple.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\fruits\grape.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\fruits\lemon.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\fruits\papaya.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\fruits\avocado.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\fruits\peach.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Animals" pingpong="0" repeatcount="1" repeatto="0" sid="386722213687461" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\horse.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\pig.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\sheep.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\bunny.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\goat.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\cow.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\words\animals\duck.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Objects" pingpong="0" repeatcount="1" repeatto="0" sid="548596979538361" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\words\objects\book.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\words\objects\pencil.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\words\objects\mirror.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\words\objects\padlock.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\words\objects\toothbrush.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\words\objects\pillow.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9625" y="0.0545455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9625" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.025" y="0.963636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="512422420120374">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="points" sid="949624942027632">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="timer" sid="965410960594902">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Function" sid="534454605746000">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="spawn" sid="636432324072724">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="489405663726302" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="destroy" sid="343698068941261">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564518859035319" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pictures" sid="460813734150397">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Fruits" pingpong="0" repeatcount="1" repeatto="0" sid="992890604394403" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Frutas\panel\apple.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Frutas\panel\grape.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Frutas\panel\lemon.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Frutas\panel\papaya.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Frutas\panel\avocado.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Animals" pingpong="0" repeatcount="1" repeatto="0" sid="469973803174241" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Animal\panel\horse.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Animal\panel\pig.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Animal\panel\sheep.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Animal\panel\bunny.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\Animal\panel\goat.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Objects" pingpong="0" repeatcount="1" repeatto="0" sid="787428883988574" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\objects\panel\book_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\objects\panel\pencil.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\objects\panel\mirror_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\objects\panel\padlock.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\objects\panel\toothbrush_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0350877" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.964912" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.964912" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RestartButton" sid="414630472581705">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="935925542889632" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\New Piskel.png">
+                        <collision-poly>
+                            <point x="0.0364238" y="0.119565" />
+                            <point x="0.5" y="0.0108696" />
+                            <point x="0.963576" y="0.119565" />
+                            <point x="0.930464" y="0.98913" />
+                            <point x="0.963576" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0364238" y="1" />
+                            <point x="0.0695364" y="0.98913" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\luanp\Downloads\New Piskel.png">
+                        <collision-poly>
+                            <point x="0.0364238" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.963576" y="0" />
+                            <point x="0.930464" y="0.0215054" />
+                            <point x="0.963576" y="0.88172" />
+                            <point x="0.5" y="0.989247" />
+                            <point x="0.0364238" y="0.88172" />
+                            <point x="0.0695364" y="0.0215054" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="979322974115388">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="life" sid="875419912489805">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="life" sid="568497013263658" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115331885199569" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\New Piskel.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\New Piskel.png">
+                        <collision-poly>
+                            <point x="0" y="0.0952381" />
+                            <point x="0.854167" y="0.0952381" />
+                            <point x="0" y="0.761905" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="levels" sid="518910159393600">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="level" sid="956585092713203" type="string" />
+                <instance-variable name="blocked" sid="160503714404768" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="346987179940089">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837709482773543" speed="0">
+                    <frame duration="1" hotspotX="0.497768" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\Frutas\fruit_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\Animal\animals_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\objects_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="Blocked" pingpong="0" repeatcount="1" repeatto="0" sid="727041433255768" speed="0">
+                    <frame duration="1" hotspotX="0.497768" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\blank_panel (1) (1)\sprite_2.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\blank_panel (1) (1)\sprite_2.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\blank_panel (1) (1)\sprite_2.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="Checked" pingpong="0" repeatcount="1" repeatto="0" sid="887246917391813" speed="0">
+                    <frame duration="1" hotspotX="0.497768" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\levels_panel\check\fruits_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\levels_panel\check\animals_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\levels_panel\check\objects_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="level" sid="236339281550728">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tiny_panel" sid="858659564224646">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525040212891768" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\blank_panel.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0701754" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.0701754" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.929825" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.929825" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hud_panel" sid="991769540002514">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="816360251741528">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614375655766646" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\panel\hud.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="glass_background" sid="562723025119627">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121337933319975" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50071" original-source="C:\Users\luanp\Downloads\New Piskel (3).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="belt" sid="528481967477068">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\luanp\Downloads\New Piskel (5).png" />
+        </object-type>
+        <object-type name="background" sid="833859589168962">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799209067416196" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="921720658042943">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="discover" sid="618363802047831">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747572827051347" speed="5">
+                    <frame duration="1" hotspotX="0.483974" hotspotY="0.474227" original-source="C:\Users\luanp\Downloads\discover_pixel.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.49359" y="0" />
+                            <point x="0.88782" y="0" />
+                            <point x="0.996795" y="0" />
+                            <point x="0.996795" y="1" />
+                            <point x="0.503205" y="0.989691" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.206186" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="broken_claw" sid="657773326137350">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="483847934569198" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501792" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\claw.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0.559761" y="0" />
+                            <point x="0" y="0.996416" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.207885" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.996416" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507042" hotspotY="0.482233" original-source="K:\PASTAS\Backup\Faculdade\5° Semestre\Projeto Game Making\Project\images\claw.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0.711268" y="0" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.997462" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.107221">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0.983871" y="0" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.60606">
+                        <collision-poly>
+                            <point x="0" y="0.824242" />
+                            <point x="0" y="0" />
+                            <point x="0.983871" y="0.945455" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="4.33333">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0.0111111" />
+                            <point x="0.983871" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="questions" sid="249845977689246">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>HUB.xml</layout>
+        <layout>FirstFase.xml</layout>
+        <layout>GameOver.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>FirstFase.xml</event-sheet>
+        <event-sheet>GameOver.xml</event-sheet>
+        <event-sheet>HUB.xml</event-sheet>
+        <event-sheet>Variables.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Function" uid="11" />
+        <global-instance type="Touch" uid="16">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="24" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

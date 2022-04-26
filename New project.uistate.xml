@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">HUB</layout>
+        <layout order="2">FirstFase</layout>
+        <layout order="4">GameOver</layout>
+        <event-sheet order="1">HUB</event-sheet>
+        <event-sheet order="3">FirstFase</event-sheet>
+        <event-sheet order="5">GameOver</event-sheet>
+        <event-sheet order="6">Variables</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/hook/" />
+        <folder expanded="1" path="animation-folder/wall/" />
+        <folder expanded="1" path="animation-folder/wordbox/" />
+        <folder expanded="1" path="animation-folder/spawn/" />
+        <folder expanded="1" path="animation-folder/destroy/" />
+        <folder expanded="1" path="animation-folder/pictures/" />
+        <folder expanded="1" path="animation-folder/RestartButton/" />
+        <folder expanded="1" path="animation-folder/life/" />
+        <folder expanded="1" path="animation-folder/levels/" />
+        <folder expanded="1" path="animation-folder/tiny_panel/" />
+        <folder expanded="1" path="animation-folder/hud_panel/" />
+        <folder expanded="1" path="animation-folder/glass_background/" />
+        <folder expanded="1" path="animation-folder/background/" />
+        <folder expanded="1" path="animation-folder/discover/" />
+        <folder expanded="1" path="animation-folder/broken_claw/" />
+    </folders-expanded>
+</c2uistate>
