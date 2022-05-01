@@ -5,14 +5,18 @@
     <events>
         <variable constant="0" name="points" sid="548259600491253" static="0" type="number">0</variable>
         <variable constant="0" name="selectedWord" sid="490633879530373" static="0" type="number">0</variable>
+        <variable constant="0" name="initialLifes" sid="271266605083430" static="0" type="number">0</variable>
         <event-block sid="371119977093749">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="645922373934403" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="736804796580205" type="Function">
-                    <param id="0" name="Name">&quot;SetHearts&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                <action id="33" name="Stop all" sid="895445150357156" type="Audio" />
+                <action id="0" name="Play" sid="409699104493043" type="Audio">
+                    <param id="0" name="Audio file">fase</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;fase&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="299618454971097" type="Function">
                     <param id="0" name="Name">&quot;GenerateAnwser&quot;</param>
@@ -24,7 +28,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="760271430404751" type="System">
                     <param id="0" name="Variable">timer</param>
-                    <param id="1" name="Value">60</param>
+                    <param id="1" name="Value">50</param>
                 </action>
                 <action id="0" name="Set text" sid="212200509016843" type="level">
                     <param id="0" name="Text">goLevel</param>
@@ -32,7 +36,28 @@
                 <action id="0" name="Set text" sid="133030130746547" type="questions">
                     <param id="0" name="Text">pictures.AnimationFrameCount</param>
                 </action>
+                <action id="-9" name="Set value" sid="322778969097204" type="System">
+                    <param id="0" name="Variable">initialLifes</param>
+                    <param id="1" name="Value">lifes</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="495982304913417">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="221221024408170" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">levelsWin</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="981854562755495" type="System">
+                            <param id="0" name="Variable">lifes</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="819115982614538">
             <conditions>
@@ -41,6 +66,10 @@
             <actions>
                 <action id="0" name="Set text" sid="593545424864319" type="points">
                     <param id="0" name="Text">points</param>
+                </action>
+                <action id="0" name="Call function" sid="736804796580205" type="Function">
+                    <param id="0" name="Name">&quot;SetHearts&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Call function" sid="778201611898286" type="Function">
                     <param id="0" name="Name">&quot;VerifyTime&quot;</param>
@@ -55,7 +84,7 @@
         <event-block sid="931066393682218">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="981583881997130" type="System">
-                    <param id="0" name="Interval (seconds)">2</param>
+                    <param id="0" name="Interval (seconds)">wordbox.generateTimer</param>
                 </condition>
             </conditions>
             <actions>
@@ -96,6 +125,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="654880419959808" type="Audio">
+                    <param id="0" name="Audio file">taking</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;taking&quot;</param>
+                </action>
                 <action id="-13" name="Set boolean" sid="422501564047369" type="hook">
                     <param id="0" name="Instance variable">active</param>
                     <param id="1" name="Value">1</param>
@@ -144,6 +179,15 @@
                 <action id="-16" name="Wait" sid="196839733844016" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
+                <action id="6" name="Stop" sid="697995259254027" type="Audio">
+                    <param id="0" name="Tag">&quot;taking&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="169403778524247" type="Audio">
+                    <param id="0" name="Audio file">walking</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;goback&quot;</param>
+                </action>
                 <action id="5" name="Set frame" sid="530619559565566" type="hook">
                     <param id="0" name="Frame number">0</param>
                 </action>
@@ -182,6 +226,9 @@
                 <action id="-13" name="Set boolean" sid="733216701819831" type="hook">
                     <param id="0" name="Instance variable">active</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Stop" sid="582951238499163" type="Audio">
+                    <param id="0" name="Tag">&quot;goback&quot;</param>
                 </action>
                 <action behavior="8Direction" id="2" name="Set ignoring input" sid="814468164039557" type="hook">
                     <param id="0" name="Input">0</param>
@@ -247,6 +294,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="540031578897392" type="Audio">
+                            <param id="0" name="Audio file">success</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;success&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="326421391026605" type="System">
                             <param id="0" name="Variable">selectedWord</param>
                             <param id="1" name="Value">0</param>
@@ -285,8 +338,11 @@
                             <param id="0" name="Variable">lifes</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="5" name="Set frame" sid="513226685081436" type="life">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="0" name="Play" sid="603217155838343" type="Audio">
+                            <param id="0" name="Audio file">curto</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;damage&quot;</param>
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="747525082667366" type="hook">
                             <param id="0" name="State">1</param>
@@ -300,6 +356,9 @@
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="611562794245667" type="hook">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="6" name="Stop" sid="411069577301778" type="Audio">
+                            <param id="0" name="Tag">&quot;damage&quot;</param>
                         </action>
                         <action behavior="8Direction" id="2" name="Set ignoring input" sid="496463182401523" type="hook">
                             <param id="0" name="Input">0</param>
@@ -347,7 +406,7 @@
                 <condition id="-14" name="Compare variable" sid="220696661675117" type="System">
                     <param id="0" name="Variable">timer</param>
                     <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">50</param>
+                    <param id="2" name="Value">40</param>
                 </condition>
             </conditions>
             <actions>
@@ -367,17 +426,105 @@
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="959608685451479" type="System">
-                    <param id="0" name="Variable">timer</param>
-                    <param id="1" name="Comparison">3</param>
+                <condition id="-14" name="Compare variable" sid="520638722504169" type="System">
+                    <param id="0" name="Variable">lifes</param>
+                    <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="105225107183662" type="System">
-                    <param id="0" name="Layout">GameOver</param>
+                <action id="-9" name="Set value" sid="785621264573008" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="887311652015521" type="System">
+                    <param id="0" name="Variable">lifes</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="618806444203997" type="Audio">
+                    <param id="0" name="Audio file">curto</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;damage&quot;</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="136503307485521" type="hook">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="537957195080834" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="837630054155046" type="hook">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="6" name="Stop" sid="874173516122618" type="Audio">
+                    <param id="0" name="Tag">&quot;damage&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="326473797143173">
+            <conditions>
+                <condition id="0" name="On function" sid="858884573964783" type="Function">
+                    <param id="0" name="Name">&quot;VerifyWin&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="536045320732454">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="509863795235148" type="System">
+                            <param id="0" name="Variable">points</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">pictures.AnimationFrameCount</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="639435436651071" type="System">
+                            <param id="0" name="Variable">points</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="613434331269966" type="System">
+                            <param id="0" name="Variable">selectedWord</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="663414986631954" type="Audio" />
+                        <action id="-2" name="Go to layout" sid="910435141493194" type="System">
+                            <param id="0" name="Layout">HUB</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="288416833135794">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="149133601873740" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">levelsWin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="843123071459804" type="System">
+                                    <param id="0" name="Variable">lifes</param>
+                                    <param id="1" name="Value">initialLifes</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="281854191012519">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="178992959100515" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">levelsWin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="541540907410892" type="System">
+                                    <param id="0" name="Variable">levelsWin</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="910969848306479">
             <conditions>
@@ -390,36 +537,47 @@
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="371810105313586" type="System">
-                    <param id="0" name="Layout">GameOver</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="326473797143173">
-            <conditions>
-                <condition id="0" name="On function" sid="858884573964783" type="Function">
-                    <param id="0" name="Name">&quot;VerifyWin&quot;</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="509863795235148" type="System">
-                    <param id="0" name="Variable">points</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">pictures.AnimationFrameCount</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="639435436651071" type="System">
-                    <param id="0" name="Variable">points</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="613434331269966" type="System">
-                    <param id="0" name="Variable">selectedWord</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="910435141493194" type="System">
-                    <param id="0" name="Layout">HUB</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="483302375930713">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="196665917362110" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">levelsWin</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="371810105313586" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="137893896255032" type="Audio" />
+                    </actions>
+                </event-block>
+                <event-block sid="610125656703760">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="336870627732568" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="820252841891605" type="System">
+                            <param id="0" name="Variable">points</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="981604531385272" type="System">
+                            <param id="0" name="Variable">selectedWord</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="979990328543420" type="System">
+                            <param id="0" name="Variable">lifes</param>
+                            <param id="1" name="Value">initialLifes</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="817166127586849" type="Audio" />
+                        <action id="-2" name="Go to layout" sid="365696856461973" type="System">
+                            <param id="0" name="Layout">HUB</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="800104330013096">
             <conditions>
@@ -440,6 +598,50 @@
                     <param id="0" name="Frame number">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="201293818895513">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="110940410806950" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="314234011524491" type="wordbox">
+                    <param id="0" name="Instance variable">generateTimer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="972344349945551" type="hook">
+                    <param id="0" name="Max Speed">400</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="148527614196019" type="wordbox">
+                    <param id="0" name="Speed">400</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="527460445255695">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="166631614742387" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="484981127948314" type="hook">
+                            <param id="0" name="Max Speed">300</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="426596956702301" type="wordbox">
+                            <param id="0" name="Instance variable">generateTimer</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="632792625935511" type="wordbox">
+                            <param id="0" name="Speed">250</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

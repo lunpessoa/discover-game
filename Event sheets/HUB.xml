@@ -3,6 +3,24 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>HUB</name>
     <events>
+        <event-block sid="690447636985764">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="551360565891699" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="861803576537075" type="Audio" />
+                <action id="0" name="Play" sid="898739583199723" type="Audio">
+                    <param id="0" name="Audio file">ambient</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;ambient&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="782681522403823" type="Function">
+                    <param id="0" name="Name">&quot;SetHearts&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="911022279829296">
             <conditions>
                 <condition id="3" name="On touched object" sid="197717155190156" type="Touch">
@@ -20,8 +38,15 @@
                     <param id="0" name="Variable">goLevel</param>
                     <param id="1" name="Value">levels.level</param>
                 </action>
+                <action id="-9" name="Set value" sid="848195500563135" type="System">
+                    <param id="0" name="Variable">level</param>
+                    <param id="1" name="Value">levels.AnimationFrame</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="219328390372385" type="System">
                     <param id="0" name="Layout">FirstFase</param>
+                </action>
+                <action id="6" name="Stop" sid="124762571279953" type="Audio">
+                    <param id="0" name="Tag">&quot;ambient&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -35,6 +60,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="931740060941927" type="Audio">
+                    <param id="0" name="Audio file">chain</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;chain&quot;</param>
+                </action>
                 <action behavior="Sine" id="0" name="Set active" sid="193482297926018" type="levels">
                     <param id="0" name="State">1</param>
                 </action>
@@ -43,6 +74,22 @@
                 </action>
                 <action behavior="Sine" id="0" name="Set active" sid="302642145639500" type="levels">
                     <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="395714491746489">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="631516500990385" type="Mouse">
+                    <param id="0" name="Object">levels</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="769059475020987" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="269008891930119" type="Audio">
+                    <param id="0" name="Audio file">hover</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;hover&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -71,6 +118,274 @@
                 </action>
                 <action id="9" name="Set scale" sid="297676369616194" type="levels">
                     <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113687401810204">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="443089690832620" type="levels">
+                    <param id="0" name="Instance variable">blocked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="461034230275128" type="levels">
+                    <param id="0" name="Instance variable">win</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="250677557927306" type="levels">
+                    <param id="0" name="Animation">&quot;Blocked&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="861405984502579">
+            <conditions>
+                <condition id="-11" name="For Each" sid="404672610088541" type="System">
+                    <param id="0" name="Object">levels</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="251354369665782">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="938533738378148" type="System">
+                            <param id="0" name="First value">levels.AnimationFrame</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">levelsWin</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="765033354369041" type="levels">
+                            <param id="0" name="Instance variable">win</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="595643441208387" type="levels">
+                            <param id="0" name="Instance variable">blocked</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="349543643862667" type="levels">
+                            <param id="0" name="Animation">&quot;Checked&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771448007495426">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="448050230256736" type="levels">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">levelsWin + 1</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="596930100611613" type="levels">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="682283089863148" type="levels">
+                            <param id="0" name="Instance variable">blocked</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="232112557960368" type="levels">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="691097489701195">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="820495302604507" type="chest">
+                    <param id="0" name="Instance variable">blocked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="537834390212318" type="chest">
+                    <param id="0" name="Animation">&quot;Blocked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="828034550016553">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="788913990398006" type="Mouse">
+                            <param id="0" name="Object">chest</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="617944756657782" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="402905818003249" type="Audio">
+                            <param id="0" name="Audio file">hover</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;hover&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="786150811714665">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="519130881767078" type="Mouse">
+                            <param id="0" name="Object">chest</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="685131120959407" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="494970235768797" type="chest">
+                            <param id="0" name="Scale">1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="728784656416691">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="440608443968536" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="188633341004393" type="chest">
+                            <param id="0" name="Scale">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="161711528294809">
+            <conditions>
+                <condition id="-22" name="Else" sid="747869784566837" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="128958727656747" type="chest">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="573713626983293">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="680497939459225" type="Mouse">
+                            <param id="0" name="Object">chest</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="278589844126537" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="694903493319686" type="Audio">
+                            <param id="0" name="Audio file">money</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;money&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="417924320426037">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="802134245370161" type="Mouse">
+                            <param id="0" name="Object">chest</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="704592240400524" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="322745081038957" type="chest">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="343975867729740" type="chest">
+                            <param id="0" name="Scale">1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="149864397094327">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="841690473281687" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="857487334196647" type="chest">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="213758000619807" type="chest">
+                            <param id="0" name="Scale">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="942798873321053">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="686915862884590" type="System">
+                    <param id="0" name="Variable">levelsWin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">levels.AnimationFrameCount - 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="328677385221131" type="chest">
+                    <param id="0" name="Instance variable">blocked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="755312522139573">
+            <conditions>
+                <condition id="3" name="On touched object" sid="799022731838077" type="Touch">
+                    <param id="0" name="Object">chest</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="286259269216141" type="chest">
+                    <param id="0" name="Instance variable">blocked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="545911982896425" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="772997308996472" type="System">
+                    <param id="0" name="Layout">WinPage</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="907304292384989">
+            <conditions>
+                <condition id="3" name="On touched object" sid="435673290444897" type="Touch">
+                    <param id="0" name="Object">chest</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="921556750715170" type="chest">
+                    <param id="0" name="Instance variable">blocked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="978941127530454" type="Audio">
+                    <param id="0" name="Audio file">wood</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;wood&quot;</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="796574518631038" type="chest">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="945914798257863" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="198096626263272" type="chest">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="347426584463906">
+            <conditions>
+                <condition id="0" name="On function" sid="393348838184064" type="Function">
+                    <param id="0" name="Name">&quot;SetHearts&quot;</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="654930536483230" type="System">
+                    <param id="0" name="Object">life</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="994044037224356" type="life">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">lifes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="805341536096003" type="life">
+                    <param id="0" name="Frame number">1</param>
                 </action>
             </actions>
         </event-block>
