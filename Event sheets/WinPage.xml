@@ -26,6 +26,10 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="754054504785144" type="qrcode" />
+                <action id="-15" name="Set visible" sid="715894616958982" type="btnGoWebsite">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="152318671344920" type="btnGoWebsite" />
                 <action id="-16" name="Wait" sid="777628792721661" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -36,24 +40,21 @@
                 <action id="-16" name="Wait" sid="521547301092150" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="981000557940289" type="RestartButton">
+                <action id="-15" name="Set visible" sid="981000557940289" type="btnRestart">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="983191008440139" type="RestartButton" />
+                <action behavior="Fade" id="1" name="Start fade" sid="983191008440139" type="btnRestart" />
             </actions>
         </event-block>
         <event-block sid="194906071592489">
             <conditions>
                 <condition id="3" name="On touched object" sid="902723475373539" type="Touch">
-                    <param id="0" name="Object">RestartButton</param>
+                    <param id="0" name="Object">btnRestart</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set cursor style" sid="157227643841980" type="Mouse">
                     <param id="0" name="Cursor style">0</param>
-                </action>
-                <action id="3" name="Start" sid="770461573643292" type="belt">
-                    <param id="0" name="From">1</param>
                 </action>
                 <action id="-21" name="Reset global variables" sid="439973378210026" type="System" />
                 <action id="-2" name="Go to layout" sid="799394278108550" type="System">
@@ -64,7 +65,7 @@
         <event-block sid="864844996273690">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="385006823944426" type="Mouse">
-                    <param id="0" name="Object">RestartButton</param>
+                    <param id="0" name="Object">btnRestart</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="151916455191763" type="System" />
             </conditions>
@@ -80,14 +81,14 @@
         <event-block sid="972098596418440">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="236408911936420" type="Mouse">
-                    <param id="0" name="Object">RestartButton</param>
+                    <param id="0" name="Object">btnRestart</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="9" name="Set scale" sid="952818646339370" type="RestartButton">
+                <action id="9" name="Set scale" sid="952818646339370" type="btnRestart">
                     <param id="0" name="Scale">0.95</param>
                 </action>
-                <action id="5" name="Set frame" sid="865673015997970" type="RestartButton">
+                <action id="5" name="Set frame" sid="865673015997970" type="btnRestart">
                     <param id="0" name="Frame number">1</param>
                 </action>
                 <action id="0" name="Set cursor style" sid="300944068493313" type="Mouse">
@@ -100,14 +101,74 @@
                 <condition id="-22" name="Else" sid="617212943362431" type="System" />
             </conditions>
             <actions>
-                <action id="9" name="Set scale" sid="964404715371199" type="RestartButton">
+                <action id="9" name="Set scale" sid="964404715371199" type="btnRestart">
                     <param id="0" name="Scale">1.0</param>
                 </action>
-                <action id="5" name="Set frame" sid="246497548369127" type="RestartButton">
+                <action id="5" name="Set frame" sid="246497548369127" type="btnRestart">
                     <param id="0" name="Frame number">0</param>
                 </action>
                 <action id="0" name="Set cursor style" sid="951689553724234" type="Mouse">
                     <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="130711534434276">
+            <conditions>
+                <condition id="3" name="On touched object" sid="353917824125577" type="Touch">
+                    <param id="0" name="Object">btnGoWebsite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="778372931990182" type="Browser">
+                    <param id="0" name="URL">&quot;https://escoladiscover.com.br/&quot;</param>
+                    <param id="1" name="Tag">&quot;EscolaDiscover&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="992173545332822">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="645742124496364" type="Mouse">
+                    <param id="0" name="Object">btnGoWebsite</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="205682030160555" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="857199140443315" type="Audio">
+                    <param id="0" name="Audio file">hover</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;hover&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="819910740578028">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="776765174004577" type="Mouse">
+                    <param id="0" name="Object">btnGoWebsite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="852518143924587" type="btnGoWebsite">
+                    <param id="0" name="Scale">0.95</param>
+                </action>
+                <action id="5" name="Set frame" sid="178040563406193" type="btnGoWebsite">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="827839889183648" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="520661401650847">
+            <conditions>
+                <condition id="-22" name="Else" sid="344122196933085" type="System" />
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="653606652891483" type="btnGoWebsite">
+                    <param id="0" name="Scale">1.0</param>
+                </action>
+                <action id="5" name="Set frame" sid="778967026095074" type="btnGoWebsite">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>

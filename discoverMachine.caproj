@@ -11,6 +11,7 @@
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -591,7 +592,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="RestartButton" sid="414630472581705">
+        <object-type name="btnRestart" sid="414630472581705">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Fade" sid="608820242853232">
@@ -1108,6 +1109,45 @@
         <object-type name="Audio" sid="652109163280320">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="btnGoWebsite" sid="352098971045826">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="116697628270915">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667837010737624" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\sprite_go_to_website0.png">
+                        <collision-poly>
+                            <point x="0.0364238" y="0.119565" />
+                            <point x="0.5" y="0.0108696" />
+                            <point x="0.963576" y="0.119565" />
+                            <point x="0.930464" y="0.98913" />
+                            <point x="0.963576" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0364238" y="1" />
+                            <point x="0.0695364" y="0.98913" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luanp\Downloads\sprite_go_to_website1.png">
+                        <collision-poly>
+                            <point x="0.0364238" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.963576" y="0" />
+                            <point x="0.930464" y="0.0215054" />
+                            <point x="0.963576" y="0.88172" />
+                            <point x="0.5" y="0.989247" />
+                            <point x="0.0364238" y="0.88172" />
+                            <point x="0.0695364" y="0.0215054" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="156667297459156">
+            <plugin id="Browser" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1146,6 +1186,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Browser" uid="50" />
     </global-instances>
     <sounds-folder>
         <file name="taking.ogg" />

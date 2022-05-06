@@ -20,7 +20,7 @@
         <event-block sid="292946385707045">
             <conditions>
                 <condition id="3" name="On touched object" sid="669151310540681" type="Touch">
-                    <param id="0" name="Object">RestartButton</param>
+                    <param id="0" name="Object">btnRestart</param>
                 </condition>
             </conditions>
             <actions>
@@ -39,7 +39,7 @@
         <event-block sid="760963001771194">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="885178984213349" type="Mouse">
-                    <param id="0" name="Object">RestartButton</param>
+                    <param id="0" name="Object">btnRestart</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="668338297684740" type="System" />
             </conditions>
@@ -55,14 +55,14 @@
         <event-block sid="999209143197774">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="987614492750156" type="Mouse">
-                    <param id="0" name="Object">RestartButton</param>
+                    <param id="0" name="Object">btnRestart</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="9" name="Set scale" sid="791676919767824" type="RestartButton">
+                <action id="9" name="Set scale" sid="791676919767824" type="btnRestart">
                     <param id="0" name="Scale">0.95</param>
                 </action>
-                <action id="5" name="Set frame" sid="369624561156722" type="RestartButton">
+                <action id="5" name="Set frame" sid="369624561156722" type="btnRestart">
                     <param id="0" name="Frame number">1</param>
                 </action>
                 <action id="0" name="Set cursor style" sid="755106791629711" type="Mouse">
@@ -75,10 +75,10 @@
                 <condition id="-22" name="Else" sid="493105627708364" type="System" />
             </conditions>
             <actions>
-                <action id="9" name="Set scale" sid="574970882471770" type="RestartButton">
+                <action id="9" name="Set scale" sid="574970882471770" type="btnRestart">
                     <param id="0" name="Scale">1.0</param>
                 </action>
-                <action id="5" name="Set frame" sid="448507686514839" type="RestartButton">
+                <action id="5" name="Set frame" sid="448507686514839" type="btnRestart">
                     <param id="0" name="Frame number">0</param>
                 </action>
                 <action id="0" name="Set cursor style" sid="490667016188183" type="Mouse">
